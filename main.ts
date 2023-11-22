@@ -1,4 +1,4 @@
-pins.servoWritePin(AnalogPin.P0, 180)
+myGigo.GigoServo(0, GigoIOPort.P1)
 basic.forever(function () {
     myGigo.GigoLed(1, LedPort.H)
     basic.pause(1000)

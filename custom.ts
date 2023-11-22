@@ -99,12 +99,12 @@ namespace myGigo {
     }
 
     /**
-     * GigoServo: Έλεγχος Servo στις θύρες ΙΟ του Gigo
+     * GigoServo: Έλεγχος Servo από τον ακροδέκτη ΙΟ του Gigo
      * Γωνία Angle : 0 -180
-     * Θύρα Port : Θύρα σύνδεσης του Servo: P1, P8, P12, P2, P13, P14, P15, P16
+     * Θύρα Port : Ακροδέκτης σύνδεσης του Servo: P1, P8, P12, P2, P13, P14, P15, P16
      */
 
-    //% block="Servo σε γωνία $Angle στη θύρα $Port"
+    //% block="Servo σε γωνία $Angle στον ακροδέκτη $Port"
     //% Angle.min=0 Angle.max=180
     export function GigoServo(Angle: number, Port: GigoIOPort) {
         if (Port == GigoIOPort.P1) {
@@ -147,6 +147,51 @@ namespace myGigo {
     }
     
 
+    /**
+     * GigoReadIRSensor: Διάβασμα τιμής αισθητήρα IR  στον ακροδέκτη ΙΟ του Gigo
+     * Θύρα Port : Ακροδέκτης σύνδεσης του αισθητήρα IR: P1, P8, P12, P2, P13, P14, P15, P16
+     */
+    //% block="Διάβασμα τιμής αισθητήρα IR στον ακροδέκτη $Port"
+     export function GigoReadIRSensor(Port: GigoIOPort): number  {
+        if (Port == GigoIOPort.P1) {
+            return pins.digitalReadPin(DigitalPin.P1);
+        }
+        else {
+            if (Port == GigoIOPort.P8) {
+                return pins.digitalReadPin(DigitalPin.P8);
+            }
+            else {
+                if (Port == GigoIOPort.P12) {
+                    return pins.digitalReadPin(DigitalPin.P12);
+                } else {
+                    if (Port == GigoIOPort.P2) {
+                        return pins.digitalReadPin(DigitalPin.P2);
+                    }
+                    else {
+                        if (Port == GigoIOPort.P13) {
+                            return pins.digitalReadPin(DigitalPin.P13);
+                        }
+                        else {
+                            if (Port == GigoIOPort.P14) {
+                                return pins.digitalReadPin(DigitalPin.P14);
+                            }
+                            else {
+                                if (Port == GigoIOPort.P15) {
+                                    return pins.digitalReadPin(DigitalPin.P15);
+                                }
+                                else {
+                                    if (Port == GigoIOPort.P16) {
+                                        return pins.digitalReadPin(DigitalPin.P16);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    return 0;
+    }
 
 
 } /* End namespace */
