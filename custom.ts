@@ -154,29 +154,36 @@ namespace myGigo {
     //% block="Διάβασμα τιμής αισθητήρα IR στον ακροδέκτη $Port"
      export function GigoReadIRSensor(Port: GigoIOPort): number  {
         if (Port == GigoIOPort.P1) {
+            pins.setPull(DigitalPin.P1, PinPullMode.PullUp);
             return pins.digitalReadPin(DigitalPin.P1);
         }
         else {
             if (Port == GigoIOPort.P8) {
+                pins.setPull(DigitalPin.P8, PinPullMode.PullUp);
                 return pins.digitalReadPin(DigitalPin.P8);
             }
             else {
                 if (Port == GigoIOPort.P12) {
+                    pins.setPull(DigitalPin.P12, PinPullMode.PullUp);
                     return pins.digitalReadPin(DigitalPin.P12);
                 } else {
                     if (Port == GigoIOPort.P2) {
+                        pins.setPull(DigitalPin.P2, PinPullMode.PullUp);
                         return pins.digitalReadPin(DigitalPin.P2);
                     }
                     else {
                         if (Port == GigoIOPort.P13) {
+                            pins.setPull(DigitalPin.P13, PinPullMode.PullUp);
                             return pins.digitalReadPin(DigitalPin.P13);
                         }
                         else {
                             if (Port == GigoIOPort.P14) {
+                                pins.setPull(DigitalPin.P14, PinPullMode.PullUp);
                                 return pins.digitalReadPin(DigitalPin.P14);
                             }
                             else {
                                 if (Port == GigoIOPort.P15) {
+                                    pins.setPull(DigitalPin.P15, PinPullMode.PullUp);
                                     return pins.digitalReadPin(DigitalPin.P15);
                                 }
                                 else {
