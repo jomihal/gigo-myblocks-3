@@ -181,6 +181,7 @@ namespace myGigo {
                                 }
                                 else {
                                     if (Port == GigoIOPort.P16) {
+                                        pins.setPull(DigitalPin.P16, PinPullMode.PullUp);
                                         return pins.digitalReadPin(DigitalPin.P16);
                                     }
                                 }
@@ -200,18 +201,22 @@ namespace myGigo {
     //% block="Διάβασμα τιμής αισθητήρα αφής στη θύρα $Port"
     export function GigoReadForceSensor(Port: GigoMotorPort): number {
         if (Port == GigoMotorPort.E) {
-            return pins.digitalReadPin(DigitalPin.P15);
+            pins.setPull(DigitalPin.P16, PinPullMode.PullUp);
+            return pins.digitalReadPin(DigitalPin.P16);
         }
         else {
             if (Port == GigoMotorPort.F) {
-                return pins.digitalReadPin(DigitalPin.P13);
+                pins.setPull(DigitalPin.P14, PinPullMode.PullUp);
+                return pins.digitalReadPin(DigitalPin.P14);
             }
             else {
                 if (Port == GigoMotorPort.G) {
-                    return pins.digitalReadPin(DigitalPin.P12);
+                    pins.setPull(DigitalPin.P2, PinPullMode.PullUp);
+                    return pins.digitalReadPin(DigitalPin.P2);
                 } else {
                     if (Port == GigoMotorPort.H) {
-                        return pins.digitalReadPin(DigitalPin.P1);
+                        pins.setPull(DigitalPin.P8, PinPullMode.PullUp);
+                        return pins.digitalReadPin(DigitalPin.P8);
                     }
                      
                     }
