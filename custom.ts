@@ -193,6 +193,33 @@ namespace myGigo {
     return 0;
     }
 
+    /**
+     * GigoReadForceSensor: Διάβασμα τιμής αισθητήρα αφής  σε θύρα του Gigo
+     * Θύρα Port : Ακροδέκτης σύνδεσης του αισθητήρα αφής: E, F, G, H
+     */
+    //% block="Διάβασμα τιμής αισθητήρα αφής στη θύρα $Port"
+    export function GigoReadForceSensor(Port: GigoMotorPort): number {
+        if (Port == GigoMotorPort.E) {
+            return pins.digitalReadPin(DigitalPin.P15);
+        }
+        else {
+            if (Port == GigoMotorPort.F) {
+                return pins.digitalReadPin(DigitalPin.P13);
+            }
+            else {
+                if (Port == GigoMotorPort.G) {
+                    return pins.digitalReadPin(DigitalPin.P12);
+                } else {
+                    if (Port == GigoMotorPort.H) {
+                        return pins.digitalReadPin(DigitalPin.P1);
+                    }
+                     
+                    }
+                }
+            }
+        
+        return 0;
+    }
 
 } /* End namespace */
 
