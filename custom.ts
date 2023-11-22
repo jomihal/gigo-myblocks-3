@@ -5,15 +5,16 @@
 */
 
 enum GigoMotorPort {
-    E,
-    F,
-    G,
-    H
-}
+    E, F, G, H 
+    }
 
 enum LedPort {
     B, C, D, E, F, G, H
     }
+
+enum GigoIOPort {
+    P1, P8, P12, P2, P13, P14, P15, P16
+}
 
 /**
  * myGigo blocks
@@ -96,4 +97,57 @@ namespace myGigo {
                 }
             }
     }
-}
+
+    /**
+     * GigoServo: Έλεγχος Servo στις θύρες ΙΟ του Gigo
+     * Γωνία Angle : 0 -180
+     * Θύρα Port : Θύρα σύνδεσης του Servo: P1, P8, P12, P2, P13, P14, P15, P16
+     */
+
+    //% block="Servo σε γωνία $Angle στη θύρα $Port"
+    //% Angle.min=0 Angle.max=180
+    export function GigoServo(Angle: number, Port: GigoIOPort) {
+        if (Port == GigoIOPort.P1) {
+            pins.servoWritePin(AnalogPin.P1, Angle);
+        }
+        else {
+            if (Port == GigoIOPort.P8) {
+                pins.servoWritePin(AnalogPin.P8, Angle);
+            }
+            else {
+                if (Port == GigoIOPort.P12) {
+                    pins.servoWritePin(AnalogPin.P12, Angle);
+                } else {
+                    if (Port == GigoIOPort.P2) {
+                        pins.servoWritePin(AnalogPin.P2, Angle);
+                    }
+                    else {
+                        if (Port == GigoIOPort.P13) {
+                            pins.servoWritePin(AnalogPin.P13, Angle);
+                        }
+                        else {
+                            if (Port == GigoIOPort.P14) {
+                                pins.servoWritePin(AnalogPin.P14, Angle);
+                            }
+                            else {
+                                if (Port == GigoIOPort.P15) {
+                                    pins.servoWritePin(AnalogPin.P15, Angle);
+                                }
+                                else {
+                                    if (Port == GigoIOPort.P16) {
+                                        pins.servoWritePin(AnalogPin.P16, Angle);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+
+
+
+} /* End namespace */
+
