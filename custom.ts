@@ -19,7 +19,7 @@ enum GigoIOPort {
 /**
  * myGigo blocks
  */
-//% weight=100 color=#0fbc11 icon=""
+//% weight=100 color=#0fbc11 icon="/uf06e"
 namespace myGigo {
     /**
      * Κινητήρας: Έλεγχος κινητήρα
