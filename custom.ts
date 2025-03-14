@@ -35,7 +35,7 @@ namespace myGigo {
         if (Port == GigoMotorPort.E) {
 if (Direction == 0) {pins.digitalWrite(DigitalPin.P15,0);
    pins.analogWritePin(AnalogPin.P16, pins.map(Speed, 0, 255, 0, 1023));} else {pins.digitalWrite(DigitalPin.P16,0);
-pins.analogWrite(AnalogPin.p15, pins.map(Speed, 0,255,0,1023);
+pins.analogWrite(AnalogPin.p15, pins.map(Speed, 0,255,0,1023));
         } else {
             if (Port == GigoMotorPort.F) {
                 pins.analogWritePin(AnalogPin.P13, pins.map(Direction, 0, 1, 0, 1023));
