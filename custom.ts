@@ -34,11 +34,10 @@ namespace myGigo {
     export function Motor(Speed: number, Direction: number, Port: GigoMotorPort) {
         if (Port == GigoMotorPort.E) {
             if (Direction == 0) {
-                pins.digitalWritePin(DigitalPin.P15,0);
-
+                pins.analogWritePin(AnalogPin.P15,0);
                 pins.analogWritePin(AnalogPin.P16, pins.map(Speed, 0, 255, 0, 1023));}
             else {
-                pins.digitalWritePin(DigitalPin.P16,0);
+                pins.analoglWritePin(AnalogPin.P16,0);
                 pins.analogWritePin(AnalogPin.P15, pins.map(Speed, 0,255,0,1023));}
         } else {
             if (Port == GigoMotorPort.F) {
